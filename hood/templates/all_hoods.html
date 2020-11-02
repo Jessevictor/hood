@@ -1,25 +1,31 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+
 {% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 <div class="container">
-        <a href="{% url 'new-hood' %}" class="btn btn-sm btn-info mb-2"> New Hood</a>
+        <a href="{% url 'new-hood' %}" style="font-family: 'Carter One', cursive;"  class="btn btn-sm btn-info mb-2"> New Hood</a>
     <div class="row">
         {% for hood in all_hoods %}
-        <div class="col-md-4">
-            <div class="card mb-4" style="min-height:340px">
-                <img src="{{ hood.hood_logo.url }}" class="card-img-top" alt="{{ hood.name }}">
+        <div style="background-image: url(https://images.unsplash.com/photo-1547866751-446296f133ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80); background-size:100%;background-repeat:repeat;" class="col-md-4">
+            <div class="card mb-3" style="min-height:360px">
+                <img src="{{ post_image.url }}" class="card-img-top" alt="{{ hood.name }}">
+                <br><br>
                 <div class="card-body">
-                    <h5 class="card-title">{{ hood.name }}  ({{hood.location}}) <span class="ml-4">{{hood.members.count}} member{{hood.members.count|pluralize}}</span></h5>
-                    <p class="card-text">{{hood.description}}</p>
+                    <h5  style="font-family: 'Carter One', cursive;"  class="card-title">{{ hood.name }} </h5><h3> ({{hood.location}}) <span class="ml-4" style="font-family: 'Carter One', cursive;"  ><br><br>{{hood.members.count}} member{{hood.members.count|pluralize}}</span></h3>
+                    <p style="font-family: 'Carter One', cursive;"   class="card-text">{{hood.description}}</p>
                     {% if request.user.profile.neighbourhood == hood %}
-                    <a href="{% url 'leave-hood' hood.id %}" class="btn btn-outline-danger btn-sm">Leave Hood</a>
+                    <br><br><br><br><br>
+                    <a href="{% url 'leave-hood' hood.id %}"  style="font-family: 'Carter One', cursive;"   class="btn btn-outline-danger btn-sm">Leave</a>
                     {% elif not request.user.profile.neighbourhood %}
-                    <a href="{% url 'join-hood' hood.id %}" class="btn btn-primary btn-sm">Join Hood</a>
+                    <br><br>
+                    <a href="{% url 'join-hood' hood.id %}" style="font-family: 'Carter One', cursive;"   class="btn btn-primary btn-sm">Join</a>
                     {% endif %}
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
+    <br><br><br><br><br><br><br><br><br>
 </div>
 {% endblock %}
