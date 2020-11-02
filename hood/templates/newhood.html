@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
-{% load bootstrap4 %}
 {% load crispy_forms_tags %}
 {% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 <div class="container bg-white newhood" style="margin-top: 10px;">
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <h3 class="text-center">Add Your hood Here</h3>
+            <h3  style="font-family: 'Carter One', cursive;"class="text-center">Add Your Neighborhood Here</h3>
             <form action="" method="post" enctype="multipart/form-data" novalidate>
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-sm btn-success">Add Hood</button>
+                <button style="font-family: 'Carter One', cursive;"class="btn btn-sm btn-success">Add Hood</button>
             </form>
         </div>
         <div class="col-md-1"></div>

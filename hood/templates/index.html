@@ -1,15 +1,13 @@
-{% load static %}
-{% load bootstrap4 %}
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 <div class="container" >
- 
-    <div class="text-white text-center" style="margin-top:100%">
-        <h1>YOUR HOOD</h1>
-        <h5 style="margin-top:6%">Come and join your hood they are waiting</h5>
-        <a href="{% url 'hood' %}" class="btn btn-sm btn-info mt-4">Join Hood</a>
+    <div class="text-white text-center" style="margin-top:05%">
+        <h1 style="font-family: 'Carter One', cursive;"><a style="color:magenta">MY</a> <a style="color: brown;">H</a>oo<a style="color: brown;">D</a></h1>
+        <h5 style="font-family: 'Carter One', cursive;margin-top:8%">Join Your Hood To day </h5>
+        <a href="{% url 'hood' %}"  style="font-family: 'Carter One', cursive;"class="btn btn-sm btn-info mt-4; ">Join</a>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br>
 
 </div>
 {% endblock %}

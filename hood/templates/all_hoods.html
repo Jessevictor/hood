@@ -4,7 +4,7 @@
 {% block content %}
 <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 <div class="container">
-        <a href="{% url 'new-hood' %}" style="font-family: 'Carter One', cursive;"  class="btn btn-sm btn-info mb-2"> New Hood</a>
+        
     <div class="row">
         {% for hood in all_hoods %}
         <div style="background-image: url(https://images.unsplash.com/photo-1547866751-446296f133ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1504&q=80); background-size:100%;background-repeat:repeat;" class="col-md-4">
@@ -22,10 +22,12 @@
                     <a href="{% url 'join-hood' hood.id %}" style="font-family: 'Carter One', cursive;"   class="btn btn-primary btn-sm">Join</a>
                     {% endif %}
                 </div>
+                
             </div>
         </div>
         {% endfor %}
     </div>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br>
+    <a href="{% url 'new-hood' %}" style="font-family: 'Carter One', cursive;"  class="btn btn-sm btn-info mb-2"> New Hood</a>
 </div>
 {% endblock %}
