@@ -4,7 +4,7 @@ This application will allow a user to create hoods or join any hood
 Clone the the repository by running
 
 ```
-git clone https://awarrdsjesse.herokuapp.com/
+git clone,
 or download a zip file of the project from github then unzip.
 ```
 
